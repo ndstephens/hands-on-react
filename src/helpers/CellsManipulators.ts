@@ -1,5 +1,6 @@
 import { Cell, CellState, Coords, Field } from './Field';
 
+// Get all coordinates of a Cell's 8 surrounding neighbors
 export const getNeighborItems = ([y, x]: Coords): Record<string, Coords> => {
   return {
     top: [y - 1, x],
@@ -13,6 +14,7 @@ export const getNeighborItems = ([y, x]: Coords): Record<string, Coords> => {
   };
 };
 
+// Check that a Cell is actually in the field (aka on the board)
 export const checkItemInField = ([y, x]: Coords, field: Field): boolean => {
   if (y < 0 || y >= field.length || x < 0 || x >= field.length) {
     return false;
@@ -20,6 +22,8 @@ export const checkItemInField = ([y, x]: Coords, field: Field): boolean => {
   return true;
 };
 
+// Increment all of a Cell's (non-bomb) neighbor's values by 1
+// Use to indicate number of bombs surrounding a Cell
 export const incrementNeighbors = (coords: Coords, field: Field): Field => {
   const neighbors = getNeighborItems(coords);
 
