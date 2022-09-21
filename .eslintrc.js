@@ -6,9 +6,8 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
@@ -23,15 +22,14 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'import',
     'simple-import-sort',
+    'import',
     'react',
     'jsx-a11y',
     'react-hooks',
     '@typescript-eslint',
   ],
   rules: {
-    // "react/no-unescaped-entities": "off",
     'no-console': 'warn',
     // SIMPLE-IMPORT-SORT
     'simple-import-sort/imports': [
