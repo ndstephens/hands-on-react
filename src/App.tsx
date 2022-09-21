@@ -1,7 +1,7 @@
-import React from 'react';
+import Legend from 'components/Legend';
 
 import './App.css';
 
 export default function App() {
-  return <h1>App Page!!</h1>;
+  return <Legend />;
 }
