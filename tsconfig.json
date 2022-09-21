@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": "src",
 
     "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,
@@ -23,10 +23,8 @@
     "noUnusedLocals": true,
     "downlevelIteration": true
     // "paths": {
-    //   "@/*": [
-    //     "src/*"
-    //   ]
-    // },
+    //   "@/*": ["src/*"]
+    // }
   },
   "include": ["src"]
 }

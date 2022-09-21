@@ -10,6 +10,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    preferRelative: true,
   },
   module: {
     rules: [
