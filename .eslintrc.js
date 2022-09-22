@@ -39,6 +39,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-empty-function': 'warn',
     // SIMPLE-IMPORT-SORT
     'simple-import-sort/imports': [
       'error',
