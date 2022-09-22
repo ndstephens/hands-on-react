@@ -4,15 +4,6 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:jsx-a11y/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -22,17 +13,29 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'simple-import-sort',
     'import',
+    'simple-import-sort',
     'react',
     'jsx-a11y',
     'react-hooks',
     '@typescript-eslint',
+    'storybook',
+  ],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
+    'prettier',
   ],
   rules: {
     'no-console': 'warn',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     // SIMPLE-IMPORT-SORT
     'simple-import-sort/imports': [

@@ -78,7 +78,7 @@ describe('Field Generator', () => {
       const probability = mines / (size * size);
       const field = fieldGenerator(size, probability);
 
-      console.table(field);
+      // console.table(field);
 
       const flattenedField = field.flat();
       expect(flattenedField.filter((cell) => cell === bomb)).toHaveLength(25);
