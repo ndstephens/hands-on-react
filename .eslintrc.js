@@ -23,6 +23,7 @@ module.exports = {
   ],
   extends: [
     'eslint:recommended',
+    'plugin:import/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
@@ -71,5 +72,14 @@ module.exports = {
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
     // SIMPLE-IMPORT-SORT
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['src/', 'node_modules/'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+    'import/ignore': ['node_modules'],
   },
 };
