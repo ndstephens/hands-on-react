@@ -1,7 +1,12 @@
-import { Legend } from 'components/Top/Legend';
-
-import './App.css';
+import { Top } from 'components/Top';
 
 export default function App() {
-  return <Legend />;
+  return (
+    <Top
+      name="minesweeper"
+      feature="Flag"
+      firstAction="ctrl"
+      secondAction="click"
+    />
+  );
 }
