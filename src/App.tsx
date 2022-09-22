@@ -1,4 +1,4 @@
-import Legend from 'components/Legend/Legend';
+import { Legend } from 'components/Top/Legend';
 
 import './App.css';
 

@@ -36,6 +36,7 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/prop-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     // SIMPLE-IMPORT-SORT
     'simple-import-sort/imports': [
