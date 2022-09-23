@@ -29,9 +29,9 @@ const Select = styled.select`
 `;
 
 const Option = styled.option`
-  font-weight: normal;
   display: block;
-  white-space: nowrap;
+  font-weight: normal;
   min-height: 1.2em;
   padding: 0 0.2vw 0.2vw;
+  white-space: nowrap;
 `;

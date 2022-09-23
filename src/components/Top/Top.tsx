@@ -14,7 +14,8 @@ export const Top: React.FC<GameNameProps & LegendProps> = ({
 );
 
 const Header = styled.header`
-  text-align: center;
   position: relative;
   display: inline-block;
+  text-align: center;
+  user-select: none;
 `;
