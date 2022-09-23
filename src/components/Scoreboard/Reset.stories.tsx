@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Reset } from './Reset';
 
 export default {
-  title: 'Reset',
+  title: 'Scoreboard/Reset',
   component: Reset,
 } as ComponentMeta<typeof Reset>;
 

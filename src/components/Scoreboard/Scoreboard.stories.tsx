@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Scoreboard } from './Scoreboard';
 
 export default {
-  title: 'Scoreboard',
+  title: 'Scoreboard/Scoreboard',
   component: Scoreboard,
 } as ComponentMeta<typeof Scoreboard>;
 

@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Level } from './Level';
 
 export default {
-  title: 'Level',
+  title: 'Scoreboard/Level',
   component: Level,
 } as ComponentMeta<typeof Level>;
 
