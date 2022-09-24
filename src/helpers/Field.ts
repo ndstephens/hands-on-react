@@ -27,17 +27,21 @@ export const fieldGenerator = (size: number, probability: number): Field => {
   if (probability < 0 || probability > 1) {
     throw new Error(PROBABILITY_ERROR_MSG);
   }
+  // TODO: should probably set min and max for "size"
+  if (size <= 0) {
+    size = 1;
+  }
 
   let unprocessedCells = size * size;
   let cellsWithBombs = unprocessedCells * probability;
-  const field: Field = emptyFieldGenerator(size);
+  const field = emptyFieldGenerator(size);
 
   if (cellsWithBombs === 0) return field;
 
   for (let y = 0; y < size; y++) {
     for (let x = 0; x < size; x++) {
       if (cellsWithBombs / unprocessedCells > Math.random()) {
-        field[y][x] = CellState.bomb;
+        field[y]![x] = CellState.bomb;
         incrementNeighbors([y, x], field);
         cellsWithBombs--;
       }

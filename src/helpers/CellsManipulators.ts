@@ -29,8 +29,8 @@ export const incrementNeighbors = (coords: Coords, field: Field): Field => {
 
   Object.values(neighbors).forEach(([y, x]) => {
     // verify it's within the field coords and also not a bomb (nor can become a bomb)
-    if (checkItemInField([y, x], field) && field[y][x] < CellState.bomb - 1) {
-      field[y][x] = (field[y][x] + 1) as Cell;
+    if (checkItemInField([y, x], field) && field[y]![x]! < CellState.bomb - 1) {
+      field[y]![x] = (field[y]![x]! + 1) as Cell;
     }
   });
 
