@@ -1,5 +1,5 @@
-import { Scoreboard } from 'components/Scoreboard';
-import { Top } from 'components/Top';
+import { Scoreboard } from '@/components/Scoreboard';
+import { Top } from '@/components/Top';
 
 export default function App() {
   return (

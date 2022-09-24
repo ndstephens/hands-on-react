@@ -15,16 +15,16 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
 
     // "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,
     "allowUnreachableCode": false,
     "noUnusedLocals": true,
     "downlevelIteration": true
-    // "paths": {
-    //   "@/*": ["src/*"]
-    // }
   },
   "include": ["src"]
 }

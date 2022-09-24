@@ -24,6 +24,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:jsx-a11y/recommended',
@@ -76,10 +77,13 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      node: {
-        moduleDirectory: ['src/', 'node_modules/'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      typescript: {
+        project: './tsconfig.json',
       },
+      // node: {
+      //   moduleDirectory: ['src/', 'node_modules/'],
+      //   extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      // },
     },
     'import/ignore': ['node_modules'],
   },
