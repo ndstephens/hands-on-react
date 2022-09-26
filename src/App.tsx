@@ -14,7 +14,7 @@ export default function App() {
         time="000"
         levels={['beginner', 'intermediate', 'expert']}
         mines="010"
-        onReset={() => {}}
+        onReset={() => null}
       />
     </>
   );
