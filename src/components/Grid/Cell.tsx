@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { Cell as CellType, CellState, Coords } from '@/helpers/Field';
+import { useMouseDown } from '@/hooks/useMouseDown';
 
 export interface CellProps {
   /**
@@ -22,6 +23,8 @@ export interface CellProps {
 }
 
 export const Cell = ({ children, coords, ...restProps }: CellProps) => {
+  const [mouseDown, setMouseDown, setMouseUp] = useMouseDown();
+
   const isActiveCell = checkCellIsActive(children);
 
   const onClick = () => {
@@ -37,25 +40,49 @@ export const Cell = ({ children, coords, ...restProps }: CellProps) => {
     }
   };
 
+  const onMouseDown = () => {
+    if (isActiveCell) {
+      setMouseDown();
+    }
+  };
+
+  const onMouseUp = () => {
+    if (isActiveCell) {
+      setMouseUp();
+    }
+  };
+
   const props = {
     onClick,
     onContextMenu,
+    onMouseDown,
+    onMouseUp,
+    onMouseLeave: onMouseUp,
+    mouseDown,
     'data-testid': `${children}_${coords}`,
   };
 
   return <CellComponent {...props}>{children}</CellComponent>;
 };
 
-// UTILITY FUNCTIONS
+/* =============================================
+              UTILITY FUNCTIONS
+============================================= */
 export const checkCellIsActive = (cell: CellType): boolean => {
   return [CellState.hidden, CellState.flag, CellState.weakFlag].includes(cell);
 };
 
-// CELL COMPONENT
+/* =============================================
+                CELL COMPONENT
+============================================= */
 interface CellComponentProps {
   children: CellType;
   onClick: () => void;
   onContextMenu: (e: React.MouseEvent<HTMLDivElement>) => void;
+  onMouseDown: () => void;
+  onMouseUp: () => void;
+  onMouseLeave: () => void;
+  mouseDown: boolean;
   'data-testid'?: string;
 }
 const CellComponent = ({ children, ...restProps }: CellComponentProps) => {
@@ -87,8 +114,14 @@ const CellComponent = ({ children, ...restProps }: CellComponentProps) => {
   }
 };
 
-// STYLED-COMPONENTS
-const ClosedFrame = styled.div`
+/* =============================================
+            STYLED-COMPONENTS
+============================================= */
+interface ClosedFrameProps {
+  mouseDown: boolean;
+}
+
+const ClosedFrame = styled.div<ClosedFrameProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +131,8 @@ const ClosedFrame = styled.div`
   height: 1.8vw;
   background-color: #d1d1d1;
   border: 0.6vh solid transparent;
-  border-color: white #9e9e9e #9e9e9e white;
+  border-color: ${({ mouseDown = false }) =>
+    mouseDown ? 'transparent' : ' white #9e9e9e #9e9e9e white'};
 
   &:hover {
     filter: brightness(1.1);

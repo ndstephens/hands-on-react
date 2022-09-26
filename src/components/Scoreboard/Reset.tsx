@@ -1,5 +1,6 @@
-import * as React from 'react';
 import styled from '@emotion/styled';
+
+import { useMouseDown } from '@/hooks/useMouseDown';
 
 export const BUTTON_ICON = '😬';
 export const BUTTON_ICON_MOUSE_DOWN = '😲';
@@ -12,13 +13,13 @@ interface Props {
 }
 
 export const Reset = ({ onReset }: Props) => {
-  const [mouseDown, setMouseDown] = React.useState(false);
+  const [mouseDown, onMouseDown, onMouseUp] = useMouseDown();
 
   return (
     <Button
-      onMouseDown={() => setMouseDown(true)}
-      onMouseUp={() => setMouseDown(false)}
-      onMouseLeave={() => setMouseDown(false)}
+      onMouseDown={onMouseDown}
+      onMouseUp={onMouseUp}
+      onMouseLeave={onMouseUp}
       onClick={onReset}
       data-testid="reset-button"
     >
