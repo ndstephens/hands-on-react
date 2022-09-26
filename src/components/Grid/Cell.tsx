@@ -23,32 +23,14 @@ export interface CellProps {
 }
 
 export const Cell = ({ children, coords, ...restProps }: CellProps) => {
-  const [mouseDown, setMouseDown, setMouseUp] = useMouseDown();
+  const [mouseDown, onMouseDown, onMouseUp] = useMouseDown();
 
-  const isActiveCell = checkCellIsActive(children);
-
-  const onClick = () => {
-    if (isActiveCell) {
-      restProps.onClick(coords);
-    }
-  };
+  const onClick = () => restProps.onClick(coords);
 
   const onContextMenu = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
-    if (isActiveCell) {
+    if (checkCellIsActive(children)) {
       restProps.onContextMenu(coords);
-    }
-  };
-
-  const onMouseDown = () => {
-    if (isActiveCell) {
-      setMouseDown();
-    }
-  };
-
-  const onMouseUp = () => {
-    if (isActiveCell) {
-      setMouseUp();
     }
   };
 
@@ -86,12 +68,17 @@ interface CellComponentProps {
   'data-testid'?: string;
 }
 const CellComponent = ({ children, ...restProps }: CellComponentProps) => {
+  const nonActiveCellProps = {
+    onContextMenu: restProps.onContextMenu,
+    'data-testid': restProps['data-testid'],
+  };
+
   switch (children) {
     case CellState.empty:
-      return <EmptyFrame {...restProps} />;
+      return <EmptyFrame {...nonActiveCellProps} />;
     case CellState.bomb:
       return (
-        <BombFrame {...restProps}>
+        <BombFrame {...nonActiveCellProps}>
           <Bomb />
         </BombFrame>
       );
@@ -110,7 +97,7 @@ const CellComponent = ({ children, ...restProps }: CellComponentProps) => {
         </ClosedFrame>
       );
     default:
-      return <RevealedFrame {...restProps}>{children}</RevealedFrame>;
+      return <RevealedFrame {...nonActiveCellProps}>{children}</RevealedFrame>;
   }
 };
 
@@ -118,7 +105,7 @@ const CellComponent = ({ children, ...restProps }: CellComponentProps) => {
             STYLED-COMPONENTS
 ============================================= */
 interface ClosedFrameProps {
-  mouseDown: boolean;
+  mouseDown?: boolean;
 }
 
 const ClosedFrame = styled.div<ClosedFrameProps>`
@@ -190,5 +177,5 @@ const colors: { [key in CellType]: string } = {
 
 const RevealedFrame = styled(EmptyFrame)`
   color: ${({ children }) => colors[children as CellType] ?? transparent};
-  font-size: 1.6vw;
+  font-size: 1.2vw;
 `;
