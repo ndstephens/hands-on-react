@@ -76,6 +76,9 @@ module.exports = {
     // SIMPLE-IMPORT-SORT
   },
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       typescript: {
         project: './tsconfig.json',
