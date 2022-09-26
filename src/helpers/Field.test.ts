@@ -72,7 +72,7 @@ describe('Field Generator', () => {
       expect(cellsWithBombs).toHaveLength(2);
       expect(cellsWithoutBombs).toHaveLength(2);
     });
-    it('Real game field size of 10x10 with 25 mines', () => {
+    it('Real game field size of 10x10 with 25 dispersed mines', () => {
       const size = 10;
       const mines = 25;
       const probability = mines / (size * size);
@@ -81,7 +81,18 @@ describe('Field Generator', () => {
       // console.table(field);
 
       const flattenedField = field.flat();
-      expect(flattenedField.filter((cell) => cell === bomb)).toHaveLength(25);
+
+      // console.log('flattenedField: ', flattenedField);
+
+      // have number of mines we expect
+      expect(flattenedField.filter((cell) => cell === bomb)).toHaveLength(
+        mines
+      );
+
+      // make sure mines aren't all packed together at the start of the field
+      expect([...field[0]!].join('')).not.toBe(
+        new Array(size).fill(9).join('')
+      );
     });
   });
 });

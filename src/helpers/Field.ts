@@ -31,10 +31,6 @@ export const fieldGenerator = (size: number, probability: number): Field => {
   if (probability < 0 || probability > 1) {
     throw new Error(PROBABILITY_ERROR_MSG);
   }
-  // TODO: should probably set min and max for "size"
-  if (size <= 0) {
-    size = 1;
-  }
 
   let unprocessedCells = size * size;
   let cellsWithBombs = unprocessedCells * probability;
