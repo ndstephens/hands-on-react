@@ -45,5 +45,5 @@ jobs:
         run: npm run build
         
       # Run Stryker-Mutator check
-      - name: Stryker-Mutator
-        run: npm run test:mutate
+      # - name: Stryker-Mutator
+      #   run: npm run test:mutate
