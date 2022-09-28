@@ -16,6 +16,7 @@ exports[`Legend renders correctly 1`] = `
       >
         ctrl
       </span>
+       + 
       <span
         class="css-9c23k1"
       >
