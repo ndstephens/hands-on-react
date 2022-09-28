@@ -10,6 +10,7 @@ export const useMouseDown = (): [
 ] => {
   const [mouseDown, setMouseDown] = React.useState(false);
 
+  // Stryker disable next-line all
   React.useDebugValue(`mouseDown: ${mouseDown}`);
 
   const onMouseDown = () => setMouseDown(true);

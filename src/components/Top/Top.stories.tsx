@@ -11,7 +11,7 @@ const Template: ComponentStory<typeof Top> = (args) => <Top {...args} />;
 
 export const TopPanel = Template.bind({});
 TopPanel.args = {
-  name: 'minesweeper',
+  children: 'minesweeper',
   feature: 'Flag',
   firstAction: 'ctrl',
   secondAction: 'click',

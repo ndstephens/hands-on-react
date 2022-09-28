@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cell component Cell renders correctly - Cell: 0 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1ux1iji"
+    data-testid="0_1,1"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 1 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1nnrvqf"
+    data-testid="1_1,1"
+  >
+    1
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 2 1`] = `
+<DocumentFragment>
+  <div
+    class="css-53i6ep"
+    data-testid="2_1,1"
+  >
+    2
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 3 1`] = `
+<DocumentFragment>
+  <div
+    class="css-160dk3x"
+    data-testid="3_1,1"
+  >
+    3
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 4 1`] = `
+<DocumentFragment>
+  <div
+    class="css-fhs7xs"
+    data-testid="4_1,1"
+  >
+    4
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 5 1`] = `
+<DocumentFragment>
+  <div
+    class="css-xb2jm"
+    data-testid="5_1,1"
+  >
+    5
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 6 1`] = `
+<DocumentFragment>
+  <div
+    class="css-8xfpdp"
+    data-testid="6_1,1"
+  >
+    6
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 7 1`] = `
+<DocumentFragment>
+  <div
+    class="css-130cupr"
+    data-testid="7_1,1"
+  >
+    7
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 8 1`] = `
+<DocumentFragment>
+  <div
+    class="css-fq6n7j"
+    data-testid="8_1,1"
+  >
+    8
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 9 1`] = `
+<DocumentFragment>
+  <div
+    class="css-4r8q4z"
+    data-testid="9_1,1"
+  >
+    <div
+      class="css-2eux8l"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 10 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1iw1ast"
+    data-testid="10_1,1"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 11 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1iw1ast"
+    data-testid="11_1,1"
+  >
+    <div
+      class="css-oefih3"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Cell renders correctly - Cell: 12 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1iw1ast"
+    data-testid="12_1,1"
+  >
+    <div
+      class="css-13jo0mv"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 2`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 3`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 4`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 5`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 6`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 7`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 8`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 9`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 10`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 11`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 12`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;
+
+exports[`Cell component Closed Frame styled-component renders correctly 13`] = `
+<DocumentFragment>
+  <div
+    class="css-1mjcmhi"
+  />
+</DocumentFragment>
+`;

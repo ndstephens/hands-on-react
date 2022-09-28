@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scoreboard test cases Scoreboard renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1xe3g8o"
+  >
+    <div
+      class="css-1tfs0js"
+    >
+      000
+    </div>
+    <select
+      class="css-55qvia"
+    >
+      <option
+        class="css-v3kp7e"
+        value="beginner"
+      >
+        beginner
+      </option>
+      <option
+        class="css-v3kp7e"
+        value="intermediate"
+      >
+        intermediate
+      </option>
+      <option
+        class="css-v3kp7e"
+        value="expert"
+      >
+        expert
+      </option>
+    </select>
+    <button
+      class="css-1cjjgsg"
+      data-testid="reset-button"
+    >
+      😬
+    </button>
+    <div
+      class="css-1tfs0js"
+    >
+      010
+    </div>
+  </div>
+</DocumentFragment>
+`;

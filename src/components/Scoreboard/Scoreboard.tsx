@@ -4,7 +4,7 @@ import { Counter } from './Counter';
 import { Level } from './Level';
 import { Reset } from './Reset';
 
-interface Props {
+export interface ScoreboardProps {
   /**
    * Timer
    */
@@ -23,7 +23,12 @@ interface Props {
   onReset: () => void;
 }
 
-export const Scoreboard = ({ time, levels, mines, onReset }: Props) => {
+export const Scoreboard = ({
+  time,
+  levels,
+  mines,
+  onReset,
+}: ScoreboardProps) => {
   return (
     <Wrapper>
       <Counter>{time}</Counter>

@@ -4,12 +4,9 @@ import { Top } from '@/components/Top';
 export default function App() {
   return (
     <>
-      <Top
-        name="minesweeper"
-        feature="Flag"
-        firstAction="ctrl"
-        secondAction="click"
-      />
+      <Top feature="Flag" firstAction="ctrl" secondAction="click">
+        minesweeper
+      </Top>
       <Scoreboard
         time="000"
         levels={['beginner', 'intermediate', 'expert']}

@@ -23,7 +23,7 @@ export const Legend: React.FC<LegendProps> = ({
   <Parent>
     <strong>{feature}: </strong>
     <Actions>
-      <FirstAction>{firstAction}</FirstAction> +{' '}
+      <FirstAction>{firstAction}</FirstAction>
       <SecondAction>{secondAction}</SecondAction>
     </Actions>
   </Parent>

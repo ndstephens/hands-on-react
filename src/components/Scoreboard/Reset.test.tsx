@@ -1,9 +1,19 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { BUTTON_ICON, BUTTON_ICON_MOUSE_DOWN, Reset } from './Reset';
+import { Reset } from './Reset';
+
+const BUTTON_ICON = '😬';
+const BUTTON_ICON_MOUSE_DOWN = '😲';
 
 describe('Reset button test', () => {
+  // Default component instance
   const ResetWithDummyHandler = () => <Reset onReset={() => null} />;
+
+  it('Should render correctly', () => {
+    const { asFragment } = render(<ResetWithDummyHandler />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 
   it('Should render elements with default state', () => {
     render(<ResetWithDummyHandler />);
@@ -22,22 +32,22 @@ describe('Reset button test', () => {
   it('Should change state when onMouseDown and onMouseUp event happen', () => {
     render(<ResetWithDummyHandler />);
 
-    fireEvent.mouseDown(screen.getByTestId('reset-button'));
-    expect(screen.getByTestId('reset-button').innerHTML).toContain(
-      BUTTON_ICON_MOUSE_DOWN
-    );
-    fireEvent.mouseUp(screen.getByTestId('reset-button'));
-    expect(screen.getByTestId('reset-button').innerHTML).toContain(BUTTON_ICON);
+    const btn = screen.getByTestId('reset-button');
+
+    fireEvent.mouseDown(btn);
+    expect(btn.innerHTML).toBe(BUTTON_ICON_MOUSE_DOWN);
+    fireEvent.mouseUp(btn);
+    expect(btn.innerHTML).toBe(BUTTON_ICON);
   });
 
   it('Should change state when onMouseDown and onMouseLeave events happen', () => {
     render(<ResetWithDummyHandler />);
 
     fireEvent.mouseDown(screen.getByTestId('reset-button'));
-    expect(screen.getByTestId('reset-button').innerHTML).toContain(
+    expect(screen.getByTestId('reset-button').innerHTML).toBe(
       BUTTON_ICON_MOUSE_DOWN
     );
     fireEvent.mouseLeave(screen.getByTestId('reset-button'));
-    expect(screen.getByTestId('reset-button').innerHTML).toContain(BUTTON_ICON);
+    expect(screen.getByTestId('reset-button').innerHTML).toBe(BUTTON_ICON);
   });
 });

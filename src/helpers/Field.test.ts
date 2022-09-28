@@ -1,9 +1,4 @@
-import {
-  CellState,
-  emptyFieldGenerator,
-  fieldGenerator,
-  PROBABILITY_ERROR_MSG,
-} from './Field';
+import { CellState, emptyFieldGenerator, fieldGenerator } from './Field';
 
 const { empty, bomb, hidden } = CellState;
 
@@ -35,8 +30,10 @@ describe('Field Generator', () => {
 
   describe('Simple cases', () => {
     it('Wrong probability', () => {
-      expect(() => fieldGenerator(1, -1)).toThrow(PROBABILITY_ERROR_MSG);
-      expect(() => fieldGenerator(1, 2)).toThrow(PROBABILITY_ERROR_MSG);
+      const ERROR_MSG = 'Probability must be between 0 and 1';
+
+      expect(() => fieldGenerator(1, -1)).toThrow(ERROR_MSG);
+      expect(() => fieldGenerator(1, 2)).toThrow(ERROR_MSG);
     });
 
     it('Smallest field without mine', () => {

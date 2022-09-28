@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legend renders correctly 1`] = `
+<DocumentFragment>
+  <legend
+    class="css-17qz6a2"
+  >
+    <strong>
+      Flag: 
+    </strong>
+    <code
+      class="css-h9xasx"
+    >
+      <span
+        class="css-udfepp"
+      >
+        ctrl
+      </span>
+      <span
+        class="css-9c23k1"
+      >
+        click
+      </span>
+    </code>
+  </legend>
+</DocumentFragment>
+`;

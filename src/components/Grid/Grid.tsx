@@ -4,7 +4,7 @@ import { Coords, Field } from '@/helpers/Field';
 
 import { Cell } from './Cell';
 
-interface GridProps {
+export interface GridProps {
   /**
    * Field data
    */
@@ -24,6 +24,7 @@ export const Grid = ({ children, ...rest }: GridProps) => {
     <Wrapper size={children.length}>
       {children.map((row, y) =>
         row.map((cell, x) => (
+          // Stryker disable next-line StringLiteral
           <Cell coords={[y, x]} {...rest} key={`${y}_${x}_${cell}`}>
             {cell}
           </Cell>

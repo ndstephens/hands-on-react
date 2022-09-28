@@ -4,13 +4,9 @@ export interface GameNameProps {
   /**
    * Text inside the header
    */
-  name: string;
+  children: string;
 }
 
-export const GameName: React.FC<GameNameProps> = ({ name }) => (
-  <GameNameHeader>{name}</GameNameHeader>
-);
-
-export const GameNameHeader = styled.h1`
+export const GameName = styled.h1<GameNameProps>`
   font-size: 2em;
 `;

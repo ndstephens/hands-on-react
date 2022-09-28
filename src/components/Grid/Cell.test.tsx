@@ -2,22 +2,33 @@ import { createEvent, fireEvent, render, screen } from '@testing-library/react';
 
 import { CellState, Coords } from '@/helpers/Field';
 
-import { Cell, CellProps, checkCellIsActive } from './Cell';
+import { Cell, CellProps, checkCellIsActive, ClosedFrame } from './Cell';
 
 describe('Cell component', () => {
   // Default props for all tests
   const coords: Coords = [1, 1];
 
+  const props: Omit<CellProps, 'children'> = {
+    coords,
+    onClick: jest.fn(),
+    onContextMenu: jest.fn(),
+  };
+
   // Loop through all Cell types and run tests on each
   for (let cell = CellState.empty; cell <= CellState.weakFlag; cell++) {
-    it(`Check context menu preventDefault works for every cell type - ${cell}`, () => {
-      const props: CellProps = {
-        children: cell,
-        coords,
-        onClick: jest.fn(),
-        onContextMenu: jest.fn(),
-      };
+    it(`Cell renders correctly - Cell: ${cell}`, () => {
+      const { asFragment } = render(<Cell {...props}>{cell}</Cell>);
 
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('Closed Frame styled-component renders correctly', () => {
+      const { asFragment } = render(<ClosedFrame mouseDown={true} />);
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    it(`Check context menu preventDefault works for every cell type - Cell: ${cell}`, () => {
       render(<Cell {...props}>{cell}</Cell>);
 
       const cellComponent = screen.getByTestId(`${cell}_${coords}`);
@@ -30,14 +41,7 @@ describe('Cell component', () => {
       expect(contextMenuEvent.defaultPrevented).toBe(true);
     });
 
-    it(`onClick and onContextMenu handlers should only be called for active cells - ${cell}`, () => {
-      const props: CellProps = {
-        children: cell,
-        coords,
-        onClick: jest.fn(),
-        onContextMenu: jest.fn(),
-      };
-
+    it(`onClick and onContextMenu handlers should only be called for active cells - Cell: ${cell}`, () => {
       render(<Cell {...props}>{cell}</Cell>);
 
       const cellComponent = screen.getByTestId(`${cell}_${coords}`);

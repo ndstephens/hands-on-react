@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1tfs0js"
+  >
+    001
+  </div>
+</DocumentFragment>
+`;

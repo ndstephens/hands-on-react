@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Level test cases Level renders correctly 1`] = `
+<DocumentFragment>
+  <select
+    class="css-55qvia"
+  >
+    <option
+      class="css-v3kp7e"
+      value="beginner"
+    >
+      beginner
+    </option>
+    <option
+      class="css-v3kp7e"
+      value="intermediate"
+    >
+      intermediate
+    </option>
+    <option
+      class="css-v3kp7e"
+      value="expert"
+    >
+      expert
+    </option>
+  </select>
+</DocumentFragment>
+`;

@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 import { useMouseDown } from '@/hooks/useMouseDown';
 
-export const BUTTON_ICON = '😬';
-export const BUTTON_ICON_MOUSE_DOWN = '😲';
+const BUTTON_ICON = '😬';
+const BUTTON_ICON_MOUSE_DOWN = '😲';
 
 interface Props {
   /**

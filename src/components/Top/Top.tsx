@@ -3,12 +3,12 @@ import styled from '@emotion/styled';
 import { GameName, GameNameProps } from './GameName';
 import { Legend, LegendProps } from './Legend';
 
-export const Top: React.FC<GameNameProps & LegendProps> = ({
-  name,
+export const Top = ({
+  children,
   ...legendProps
-}) => (
+}: GameNameProps & LegendProps) => (
   <Header>
-    <GameName name={name} />
+    <GameName>{children}</GameName>
     <Legend {...legendProps} />
   </Header>
 );
