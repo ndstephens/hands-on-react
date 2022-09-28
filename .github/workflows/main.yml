@@ -24,6 +24,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      # Install deps
+      - name: Install npm deps
+        run: npm i
+        
+      # Run linter
+      - name: Lint
+        run: npm run lint
+        
+      # Run formatter
+      - name: Format
+        run: npm run format
+      
       # Run tests
       - name: Tests
         run: npm test
